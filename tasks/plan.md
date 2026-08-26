@@ -1,5 +1,63 @@
 # Sun-Shine AI 官网内容重构计划
 
+## 品牌视频合成计划（2026-08-25/26）
+
+### 目标与范围
+
+把 `video/01a.mp4` ~ `video/01e.mp4`（5 段，均为 1280×720 / h264 / 24fps / 恰好 10.005s，规格完全一致，可直接拼接）剪辑合并为一条完整品牌短片，剪掉重复/冗余片段，叙事顺序对齐 sunshine.ai 官网整体内容（出海供应链 → GEO/AI 搜索优化 → Agent OS/多 Agent 协作 → 四大产品体系收束）。产出一个新的合成视频文件，**不**自动替换现有首页 hero 背景视频（`01_outbound.mp4`，10s 自动循环，用途不同）——是否接入网站是后续单独决定。
+
+### 素材初勘（5 帧/条抽样已完成）
+
+- **01a**：全球贸易/供应链（飞机·火车·船·床垫/健身车等实体产品）→ 世界地图看板 → SUNSHINE.AI 收尾卡片（"Global Intelligence & Growth"）。
+- **01b**：GEO & AI Search Optimization（设备 + Reddit/Quora/Wikipedia/Medium 搜索引擎光束，文字停留较长）→ "Full-Link Closed Loop" 看板 → Sun-Shine.ai 收尾卡片（"Build Your Intelligent Enterprise System"）。
+- **01c**："Full-Link Closed Loop" 看板（与 01b 结尾重复）→ "Powered by Agent OS" 工作流图 → 多 Agent 协作全息场景（Traffic/Market Analysis/Customer Service Agent）→ 看板收尾。
+- **01d**：悬浮玻璃立方体依次标注 **Growth / Intelligence / Agent OS / Engineering**（与官网刚重写的四大产品体系完全对应，视觉上是最贴合当前内容的片段）→ 隧道汇聚到金色 S logo → Sun-Shine.ai 收尾卡片（与 01b 结尾同款，长时间静止）。
+- **01e**：地球 + "AI GROWTH PLATFORM" 看板（与 01a/01b/01c 看板主题重复）→ "AGENT OS · STANDARDIZED SYSTEM" Agent 网络场景（与 01c 主题重复）→ SUNSHINE.AI 收尾卡片（"Intelligent Opera…"，第三种收尾卡样式）。
+
+**冗余判断**：5 段各自独立生成，各自带"看板"过场和"收尾 logo 卡"，直接拼接会在视频中段反复出现 3~4 次几乎相同的收尾卡和抽象看板镜头，打断叙事。需要保留每个主题唯一一次、精简看板过场，只在全片最后保留一次收尾卡。
+
+### 并发切片
+
+- **Slice A（5 路并发，逐条精修分镜）**：对 01a~01e 各起一个 fork agent，以 0.5s 间隔抽帧、生成分镜表（时间点 + 画面描述），标注：可裁剪的静止/冗余镜头（结合已知的跨条重复主题）、值得完整保留的独特/贴合品牌内容的镜头，给出建议的 in/out 时间点（精确到 0.1s）。
+- **Slice B（主线程，跨条叙事编排）**：汇总 5 份分镜表后，决定最终顺序、每段的精确裁剪区间、转场方式（硬切 vs 交叉淡化），产出一份 ffmpeg trim+concat 方案。
+- **Slice C（主线程，渲染与校验）**：执行 ffmpeg 裁剪/拼接，抽帧校验成片，用户确认后再考虑是否接入网站。
+
+### 实际执行结果（2026-08-25）
+
+并发 fork 编排在实际执行中受阻（第 2 个 Agent 调用报错 "Fork is not available inside a forked worker"，怀疑与本轮会话此前的 autonomous-loop tick 状态有关），改为主线程直接对 5 条素材逐一做 0.5s 间隔精细抽帧 + contact sheet 审阅，效果等价，只是牺牲了原计划的多路并发。
+
+**最终剪辑决策（5 段，4 处 0.35s gold-flare 交叉淡化转场，成片 20.75s，1280×720/24fps/h264，静音）**：
+1. `01a[0.0–6.3s]` 贸易/供应链蒙太奇 + 世界地图看板（对应"全球化增长"）
+2. `01b[0.0–4.8s]` GEO & AI Search Optimization（Reddit/Quora/Wikipedia/Medium，对应 Sun-Shine Growth 支柱）
+3. `01d[0.0–3.2s]` 悬浮立方体 Growth/Intelligence/Agent OS/Engineering（直接对应官网四大产品体系）
+4. `01c[7.0–9.9s]` 多 Agent 协作全息场景（Sales/Market Analyst/Customer Service Agent，对应 Sun-Shine Agent OS）
+5. `01d[3.2–8.0s]` 金色 S logo 汇聚 → "Sun-Shine.ai: Build Your Intelligent Enterprise System" 收尾卡（全片唯一一次收尾卡）
+
+**01e 整条弃用**：细看后发现它的三个镜头（地球+看板／Agent 网格／收尾卡）分别与 01a、01c、01b·01d 已重复，是五条里冗余度最高的一条，直接排除比截取零星片段更干净。
+
+**音频**：五条素材各自带独立 AAC 音轨（很可能配乐互不相配），本轮任务明确只谈"内容/画面"合并，未涉及音频要求，为避免拼出杂乱的配乐撞车，成片按静音交付；如需配乐/旁白是后续单独任务。
+
+产出：`video/sunshine-brand-reel.mp4`（原 `01_outbound.mp4` 未被覆盖）。
+
+### 验收标准
+
+- [x] 成片时长明显短于 50.025s 原始总和（20.75s），无重复的收尾卡片段（只在片尾出现一次）。
+- [x] 叙事顺序对应官网内容（出海供应链 → GEO/AI 搜索 → 四大产品体系 → Agent OS/多 Agent 协作 → 收尾）。
+- [x] 音视频编码一致、无花屏/黑帧/跳帧；4 处转场经抽帧复核，转场自然（金色光效作为素材间共通的视觉语言）。
+- [x] 产出文件不覆盖 `01_outbound.mp4`，落在 `video/sunshine-brand-reel.mp4`。
+- [x] 抽帧校验成片内容（覆盖 5 段内部 + 4 处转场 + 片尾）后再交付。
+- [ ] 是否接入网站（如替换/新增到某个页面区块）——未做，需用户确认。
+
+### 追加：英文女声旁白 + 背景音乐（2026-08-26）
+
+- 旁白：macOS `say -v Samantha`（系统自带，无需外部 API/key），按 4 段视觉节拍分句，逐句按 `01a/01b/01d+01c/01d` 的时间轴起点对齐（0s / 5.95s / 10.4s / 15.8s），第 3 句用 `atempo=1.2` 微调语速以匹配较短的镜头窗口。
+- 背景音乐：**非授权曲库素材**——用 ffmpeg 合成的原创环境音床（五个正弦波叠加简单和弦 + 低通 + 回声 + 首尾淡入淡出），旁白出现时自动 duck 到约 -13dB。选用合成音乐是为了避免版权风险，音色偏简单/氛围向，不是正式配乐制作。
+- 混音：旁白与音乐分别过 `volumedetect` 校验电平，最终过 `alimiter` 防削波，裁到与视频等长的 20.75s，`silencedetect` 确认全程无异常静音。
+- 产出：`video/sunshine-brand-reel-narrated.mp4`（视频轨用 `-c:v copy` 保留，不重新编码画面；仅新增 AAC 立体声音轨）。原 `video/sunshine-brand-reel.mp4`（静音版）保留未删。
+- **未做**：没有人工试听校验发音（"AI""Agent OS""Sun-Shine.ai" 等词的实际读法只能靠 TTS 引擎默认处理，未做人耳复核）；背景音乐是合成音色而非真实录制配乐；未接入网站。
+
+**中文女声版（2026-08-26 追加）**：改用 macOS `say -v Tingting`（zh_CN 系统女声），文案对应四段视觉节拍并直接复用官网原文措辞——① 出海供应链（"Sun-Shine 帮助中国品牌走向全球市场，连接供应链的每一个环节"）② GEO/AI 搜索（"让品牌被 AI 搜索看见、理解、推荐"）③ 四大体系（逐字念出 `business[]` 的中文标题："增长引擎、经营智能、Agent 操作系统、智能工程，四大体系协同运转"）④ 收尾用官方中文名"顺晟智能，从一个真实的问题开始"（未沿用英文版的 "Sun-Shine.ai" 读法，避免中英混读别扭）。因中文语音比预估长，第 1/3 句分别用 `atempo=1.05`/`1.20` 微调、第 4 句起点相应顺延到 16.7s，背景音乐 duck 窗口同步重新计算。产出 `video/sunshine-brand-reel-narrated-zh.mp4`，同样 20.75s、`-c:v copy` 未改画面、削波和静音检测均通过。
+
 ## 战略文档驱动的官网升级计划（2026-08-25）
 
 ### 目标与范围

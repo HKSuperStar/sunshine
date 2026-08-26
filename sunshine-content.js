@@ -12,6 +12,11 @@ window.SUNSHINE_CONTENT = {
         primaryCta: '预约增长诊断', secondaryCta: '查看系统如何工作'
       },
       orbit: { question: '用户问题', product: '商品知识', action: '增长动作', outcome: '结果归因' },
+      brandVideo: {
+        kicker: '品牌短片', titlePlain: '20 秒，看懂 ', titleHighlight: 'Sun-Shine 在做什么。',
+        description: '从供应链出海到 AI 可见性，从四大产品体系到 Agent 协作——一条视频讲清楚 Sun-Shine 如何把品牌带到全球市场。',
+        videoSrc: '/video/sunshine-brand-reel-narrated-zh.mp4'
+      },
       architecture: {
         kicker: '01 · 重新定义增长基础设施',
         title: '增长不是更多工具，而是一条更短的结果链。',
@@ -104,6 +109,11 @@ window.SUNSHINE_CONTENT = {
       nav: { architecture: 'Architecture', services: 'Business', process: 'Process', products: 'Products', agents: 'Agents', operations: 'Operations', delivery: 'Delivery', proof: 'Method', positioning: 'Positioning', contact: 'Contact', cta: 'Book a growth audit' },
       hero: { eyebrow: 'Sun-Shine AI Growth Infrastructure', title: 'Make products understood by AI. Make growth compound.', description: 'Sun-Shine helps enterprises achieve growth digitalization, operating intelligence, and global expansion — connecting AI visibility, product understanding, growth execution, and outcome attribution into one continuously operating, continuously replicable growth system.', uptime: 'Always on', layers: 'Product pillars', chain: 'Outcome chain', primaryCta: 'Book a growth audit', secondaryCta: 'See how it works' },
       orbit: { question: 'User questions', product: 'Product knowledge', action: 'Growth actions', outcome: 'Outcomes' },
+      brandVideo: {
+        kicker: 'BRAND FILM', titlePlain: 'See what ', titleHighlight: 'Sun-Shine builds in 20 seconds.',
+        description: 'From global supply chains to AI visibility, from the four product pillars to Agent collaboration — one short film for how Sun-Shine takes brands into global markets.',
+        videoSrc: '/video/sunshine-brand-reel-narrated.mp4'
+      },
       architecture: { kicker: '01 · RETHINKING GROWTH INFRASTRUCTURE', title: 'Growth is not more tools. It is a shorter path to outcomes.', description: 'Sun-Shine started with overseas marketing, and follows the path from Digital Growth to GEO, AI Commerce, and Agent OS — organizing signals scattered across search, products, content, advertising, and customer operations into a system that can understand, execute, validate, and compound.', imageAlt: 'Sun-Shine signal flow from user questions to outcome attribution' },
       services: { kicker: '02 · FOUR PRODUCT PILLARS', title: 'From being seen, to being chosen, to making results reusable.', description: 'Each area defines its inputs, actions, and outputs. Start with one or combine them into a complete growth system.', input: 'Input signals', output: 'Output assets' },
       business: [

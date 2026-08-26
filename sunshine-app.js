@@ -50,6 +50,18 @@
     setText('hero-primary', C.hero.primaryCta);
     setText('hero-secondary', C.hero.secondaryCta);
     setText('hero-title', C.hero.title);
+    if (C.brandVideo) {
+      setText('brand-video-kicker', C.brandVideo.kicker);
+      setHeading('brand-video-title', C.brandVideo.titlePlain, C.brandVideo.titleHighlight);
+      setText('brand-video-description', C.brandVideo.description);
+      const brandVideoEl = document.getElementById('brand-video-player');
+      if (brandVideoEl && brandVideoEl.getAttribute('src') !== C.brandVideo.videoSrc) {
+        const wasPlaying = !brandVideoEl.paused;
+        brandVideoEl.setAttribute('src', C.brandVideo.videoSrc);
+        brandVideoEl.load();
+        if (wasPlaying) brandVideoEl.play().catch(() => {});
+      }
+    }
     setText('architecture-kicker', C.architecture.kicker);
     setHeading('architecture-title', language === 'en' ? 'Growth is not more tools. ' : '增长不是更多工具，', language === 'en' ? 'It is a shorter path to outcomes.' : '而是一条更短的结果链。');
     setText('architecture-description', C.architecture.description);
