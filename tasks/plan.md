@@ -1,5 +1,44 @@
 # Sun-Shine AI 官网内容重构计划
 
+## 战略文档驱动的官网升级计划（2026-08-25）
+
+### 目标与范围
+
+根据 `doc/Sun-Shine 公司战略目标与业务范围.md` 升级官网内容层，使其准确反映公司四大产品体系（Sun-Shine Growth / Intelligence / Agent OS / Engineering）、十大业务范围、五种商业模式与八条核心竞争力。当前 `#services`（四个业务板块）仍沿用早期 GEO 专属框架（AI Visibility / Commerce Intelligence / Growth Operations / Outcome Intelligence），未对齐战略文档 §四 的官方四大产品体系命名；`#products` 模块未覆盖十大业务范围；商业模式与核心竞争力完全缺失。
+
+### 架构决策
+
+- 保持现有单页信息架构、`sunshine-content.js` 双语内容模型、`sunshine-app.js` 原生渲染管线，不引入新依赖或新运行时。
+- `#services`（四个业务板块）与 `#products`（产品模块）统一重构为围绕四大产品体系：`#services` 是每个体系的问题-承诺卡片，`#products` 是每个体系的旗舰产品 + 模块 chips，chips 合计覆盖十大业务范围。
+- 新增两个区块，复用现有 `proof-grid` / `positioning-grid` 卡片视觉模式（编号卡片 + 轻边框 + 浅色底）：
+  - `#business-model`（商业模式，5 项：企业智能化项目 / 年度顾问与运营 / SaaS 与 Agent 订阅 / 效果分成 / 战略合作与联合运营），置于 `#delivery-agents` 之后、`#proof` 之前，`bg-white`。
+  - `#capabilities`（核心竞争力，8 条“懂 X 而不仅是懂 Y”断言），置于 `#positioning` 之后、行业区块之前，`bg-mist`，卡片样式简化为要点行（非编号大卡）。
+- 不新增顶部导航项（沿用现状：`#faq`/行业区块本就无导航入口），避免桌面导航拥挤。
+- 顺带重新连续编号所有区块 kicker（01–11），修复既有 `05`/`06` 重复编号问题。
+- 首次为该目录建立 git 版本控制（此前无 VCS，生产站点无法安全回滚），已提交基线快照 `6a3c333` 后再执行本轮改动。
+
+### 并发切片
+
+- **Slice A（结构与渲染，Agent 独立执行）**：在 `index.html` 新增 `#business-model`、`#capabilities` 两个 `<section>`（含 kicker/title/description 占位 id 与 grid 容器），在 `sunshine-app.js` 的 `renderPage()` 中新增对应渲染逻辑，读取 `C.businessModel` / `C.capabilities`（形状见下），渲染前以 `if (C.xxx)` 守卫，**不写 `sunshine-content.js`**，避免与内容编辑并发冲突。
+- **Slice B（内容重写，主线程直接编辑 `sunshine-content.js`）**：改写 `business[]`（4 张体系卡）、`products.items`（4 张旗舰产品卡 + 覆盖十大业务范围的 modules chips）、新增 `businessModel{}`、`capabilities{}`（中文）、更新 `industries.items`（对齐文档九大目标行业）、新增 2 条 FAQ、微调 `hero.description`/`hero.layers`、`architecture.description`（融入“海外营销→数字化增长→GEO→AI Commerce→Agent OS”路径）、统一重排各 kicker 编号。
+- **Slice C（翻译，依赖 Slice B 完成）**：Slice B 完成后，将新增/改写的中文内容整体交付翻译，产出对应英文文本，保持既有英文语气与术语（GEO/GMV/SKU/CRM/MOQ/SLA 及 Sun-Shine Growth/Intelligence/Agent OS/Engineering 等专有名词不译）。
+
+### 内容契约（新区块）
+
+```
+businessModel: { kicker, titlePlain, titleHighlight, description, items: [[title, desc], ...] }  // 5 项
+capabilities:  { kicker, titlePlain, titleHighlight, description, items: [line, ...] }             // 8 项（纯字符串）
+```
+
+### 验收标准
+
+- [ ] `#services`/`#products` 内容与四大产品体系一致，十大业务范围全部在 `#products` modules chips 中可追溯。
+- [ ] `#business-model`、`#capabilities` 区块渲染正常，中英文切换同步，移动端不溢出。
+- [ ] `industries`、`faq` 更新且不引入文档未覆盖的事实性宣称。
+- [ ] `npm run build`（Tailwind）通过；浏览器 320/768/1024/1440 视口验收无横向溢出、无 JS 报错。
+- [ ] 未破坏现有锚点、语言切换持久化与联系表单交互。
+- [ ] 完成后提交一次 git commit（此前已建立基线 `6a3c333`），便于对比与回滚。
+
 ## 数据、研发与任务执行 Agent 官网集成计划（2026-08-21）
 
 ### 目标与范围

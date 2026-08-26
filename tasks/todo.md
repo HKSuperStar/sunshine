@@ -1,5 +1,14 @@
 # Sun-Shine AI 官网内容重构
 
+## 战略文档驱动的官网升级（2026-08-25）
+
+- [x] 建立 git 基线快照（此前目录无版本控制）
+- [x] Slice A：新增 `#business-model`、`#capabilities` 区块结构与渲染逻辑（index.html + sunshine-app.js，不碰 content.js）
+- [x] Slice B：重写 `business[]`/`products.items`/`industries`/`faq`，新增 `businessModel{}`/`capabilities{}`（中文），统一 kicker 编号
+- [x] Slice C：Slice B 完成后产出对应英文内容并合并
+- [x] Checkpoint：静态构建通过；浏览器桌面视口 + 中英文切换验收通过，无 console 报错；移动视口未能在本环境可靠触发断点重渲染，但新区块复用了页面既有的、已验收过的响应式 grid class，风险低
+- [x] Checkpoint：git commit 记录本轮改动
+
 ## 数据、研发与任务执行 Agent 集成
 
 - [x] Slice A：建立数据洞察、研发协同、任务编排、质量交付四个 Agent 的双语数据
