@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify"
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify && node scripts/build-site.cjs"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
