@@ -117,6 +117,8 @@ a.chip:hover, button.chip:hover { border-color: var(--gold); }
 .feature-image img { width: 100%; height: auto; }
 .feature-image figcaption { padding: 12px 18px; color: var(--muted); font-size: 0.875rem; }
 .feature-image + .grid { margin-top: 32px; }
+.about-hero-video { background: var(--navy-deep); }
+.about-hero-video video { display: block; width: 100%; height: clamp(240px, 56.25vw, 680px); object-fit: cover; }
 
 .timeline { margin-block: 28px; }
 ol.timeline, .timeline ol { margin-inline-start: 8px; padding: 0 0 0 28px; border-inline-start: 1px solid var(--line); list-style: none; }
