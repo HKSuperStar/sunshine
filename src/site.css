@@ -78,6 +78,12 @@ hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--line); }
 .hero h1 { max-width: 19ch; }
 .hero .lead { max-width: 62ch; }
 .hero .grid { align-items: center; gap: clamp(28px, 5vw, 72px); }
+.trade-hero { background: radial-gradient(ellipse at 90% 20%, #264b5c, transparent 70%), #0a1e29; }
+.trade-hero h1, .trade-hero .hero-secondary { color: #f7faf6; }
+.trade-hero .lead, .trade-hero .hero-topics, .trade-hero figcaption { color: #c4d1ca; }
+.trade-hero .eyebrow { color: #e9c982; }
+.trade-hero .button { background: #e9c982; border-color: #e9c982; color: #0a1e29; }
+#trade-services, #trade-form { scroll-margin-top: 100px; }
 .illustrated-hero { overflow: hidden; padding-block: clamp(48px, 6vw, 88px); border-bottom: 1px solid var(--line); }
 .hero-layout { display: grid; grid-template-columns: 1.08fr 1fr; align-items: center; gap: 48px; }
 .hero-copy { min-width: 0; }

@@ -20,6 +20,8 @@ python3 -m http.server 4173 --directory public
 
 中文路由 `/about/`、`/products/`、`/cases/`、`/blog/`、`/faq/`、`/contact/`；英文在 `/en/` 下镜像。博客详情在 `/blog/<slug>/`。
 
+出海外贸业务专页为 `/global-trade/`（英文 `/en/global-trade/`），归属产品栏目，首页、产品、案例、联系页均提供入口。`global-trade-content.cjs` 管理双语业务文案，`scripts/global-trade-page.cjs` 管理专页模板。专用需求表在浏览器生成包含企业、邮箱、产品、目标市场、阶段与问题的文本，可复制分享。未接入实际收件服务。
+
 ## 验证
 
 `node scripts/verify-site.cjs` 检查生成页面、导航与本地资源。
