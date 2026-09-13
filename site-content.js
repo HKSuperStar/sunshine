@@ -22,6 +22,39 @@ module.exports = {
         ['Agent OS｜长期建设企业智能基础设施', '以知识库、流程编排、权限审批、结果验证和失败恢复为建设方向，逐步把业务经验沉淀为可持续迭代的企业级 Agent 系统。']
       ]
     },
+    cases: [
+      {
+        slug: 'joylink',
+        eyebrow: 'CASE STUDIES',
+        title: 'JoyLink Wire Mesh Global Trade Agentic',
+        summary: 'JoyLink Wire Mesh Global Trade Agentic 将海外获客、报价、订单、供应链与交付协同连接起来，让线材贸易团队从依赖人工跟进，走向由 Agent 驱动、由人审批的全球业务流程。',
+        description: 'JoyLink Wire Mesh Global Trade Agentic 将海外获客、报价、订单、供应链与交付协同连接起来，让线材贸易团队从依赖人工跟进，走向由 Agent 驱动、由人审批的全球业务流程。',
+        sectionTitle: '全球线材贸易与 Agent 协作',
+        imageAlt: 'JoyLink Wire Mesh Global Trade Agentic 全球线材贸易 Agent 协作',
+        image: 'joylink-wire-mesh-agentic.png',
+        video: 'sunshine-cases-hero-10s.mp4',
+        videoLabel: 'JoyLink 全球线材贸易案例，10 秒展示视频',
+        items: [
+          ['项目背景', '面向全球市场的金属丝网与工业材料供应商，需要同时处理多语言询盘、规格匹配、报价、客户跟进和订单交付。'],
+          ['Agent 协作', '由获客分析、客户画像、报价支持、订单协同与经营分析等 Agent 分工协作，把分散在邮件、表格和业务系统中的信号组织起来。'],
+          ['业务结果', '让每条线索都有状态、每次报价有依据、每个订单可追踪，并为后续的收入归因、复购运营和供应链决策沉淀数据资产。']
+        ]
+      },
+      {
+        slug: 'eureka',
+        eyebrow: 'CASE STUDIES',
+        title: 'Eureka Robot Vacuum Global Social Agentic',
+        summary: 'Eureka 把多平台内容、达人协作与转化数据连接起来，让社媒营销从投放动作变成可复用的增长系统。',
+        description: 'Eureka Robot Vacuum Global Social Agentic 将 TikTok、Instagram、YouTube 与社区内容、达人合作和站内转化连接起来，让智能家电出海团队从分散的内容投放，走向由 Agent 驱动、由人审批的社媒增长协作流程。',
+        sectionTitle: '全球社媒营销与 Agent 协作',
+        imageAlt: 'Eureka Robot Vacuum Global Social Agentic 全球社媒营销 Agent 协作插画',
+        items: [
+          ['项目背景', '面向海外市场的智能家电品牌，需要同时经营 TikTok、Instagram、YouTube 与社区内容，并协调多位达人的合作节奏、简报和素材审核。'],
+          ['内容与达人协作', '由选题策划、达人匹配与简报、内容审核与合规、社群互动等 Agent 分工协作，把分散在各平台后台、私信和表格中的信号组织起来。'],
+          ['业务结果', '让每条内容有选题依据、每次达人合作可追踪、每个平台的声量与站内转化能够关联，为后续内容优化和预算分配积累数据资产。']
+        ]
+      }
+    ],
     posts: [
       {
         slug: 'connect-growth-to-business-outcomes',
@@ -82,6 +115,39 @@ module.exports = {
         ['Agent OS | Build enterprise intelligence infrastructure over time', 'Develop toward knowledge bases, workflow orchestration, permissions, approvals, result verification, and failure recovery, gradually turning business experience into enterprise Agent systems that can continuously improve.']
       ]
     },
+    cases: [
+      {
+        slug: 'joylink',
+        eyebrow: 'CASE STUDIES',
+        title: 'JoyLink Wire Mesh Global Trade Agentic',
+        summary: 'JoyLink Wire Mesh Global Trade Agentic connects overseas acquisition, quoting, orders, supply chain, and delivery coordination so a wire-mesh trade team can move from manual follow-up to Agent-driven workflows with human approval.',
+        description: 'JoyLink Wire Mesh Global Trade Agentic connects overseas acquisition, quoting, orders, supply chain, and delivery coordination so a wire-mesh trade team can move from manual follow-up to Agent-driven workflows with human approval.',
+        sectionTitle: 'Global wire-mesh trade & Agent collaboration',
+        imageAlt: 'JoyLink Wire Mesh Global Trade Agentic global wire-mesh trade Agent collaboration',
+        image: 'joylink-wire-mesh-agentic.png',
+        video: 'sunshine-cases-hero-10s.mp4',
+        videoLabel: 'JoyLink global wire-mesh trade case study, 10-second showcase',
+        items: [
+          ['The challenge', 'A global metal wire-mesh supplier needed to manage multilingual inquiries, specification matching, quoting, customer follow-up, and order delivery at the same time.'],
+          ['Agent collaboration', 'Acquisition, persona, quoting, order coordination, and operating intelligence Agents organize signals scattered across email, spreadsheets, and business systems.'],
+          ['Business result', 'Every lead gets a status, every quote has evidence, and every order stays traceable—while the data foundation compounds for attribution, repeat purchase, and supply-chain decisions.']
+        ]
+      },
+      {
+        slug: 'eureka',
+        eyebrow: 'CASE STUDIES',
+        title: 'Eureka Robot Vacuum Global Social Agentic',
+        summary: 'Eureka connects multi-platform content, creator collaboration, and conversion data into one repeatable social growth system.',
+        description: 'Eureka Robot Vacuum Global Social Agentic connects TikTok, Instagram, YouTube, and community content with creator collaboration and on-site conversion, helping a smart home appliance team move from scattered social campaigns to Agent-driven workflows with human approval.',
+        sectionTitle: 'Global social marketing & Agent collaboration',
+        imageAlt: 'Eureka Robot Vacuum Global Social Agentic global social marketing Agent collaboration illustration',
+        items: [
+          ['The challenge', 'A smart home appliance brand selling overseas needed to run TikTok, Instagram, YouTube, and community content at the same time, while coordinating multiple creators\' briefs, timelines, and asset reviews.'],
+          ['Content & creator collaboration', 'Topic planning, creator matching and briefing, content review and compliance, and community engagement Agents organize signals scattered across platform inboxes, DMs, and spreadsheets.'],
+          ['Business result', 'Every piece of content has a rationale, every creator collaboration stays traceable, and platform reach connects to on-site conversion, building a data foundation for content optimization and budget allocation.']
+        ]
+      }
+    ],
     posts: [
       {
         slug: 'connect-growth-to-business-outcomes',
