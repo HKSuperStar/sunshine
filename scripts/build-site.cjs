@@ -13,6 +13,7 @@ for (const file of ['sun-shine-logo.png', 'sunshine-signal-flow.svg']) fs.copyFi
 fs.copyFileSync('src/site.css', path.join(out, 'site.css'));
 fs.copyFileSync('site.js', path.join(out, 'site.js'));
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+let written = 0;
 const routes = ['about', 'products', 'cases', 'blog', 'faq', 'contact'];
 const labels = {zh:['关于 SunShine','产品','成功案例','博客','FAQ','联系我们'],en:['About SunShine','Products','Case studies','Blog','FAQ','Contact']};
 const cards = items => items.map(([title,desc]) => `<article class="card"><h3>${esc(title)}</h3><p>${esc(desc)}</p></article>`).join('');
@@ -58,7 +59,10 @@ for (const lang of ['zh', 'en']) {
     const nav = routes.map((r,i)=>`<a class="nav-link${route===r||route.startsWith(r+'/')||route==='global-trade'&&r==='products'?' active':''}" ${route===r||route.startsWith(r+'/')?'aria-current="page"':route==='global-trade'&&r==='products'?'aria-current="true"':''} href="${url(r)}">${labels[lang][i]}</a>`).join('');
     const html = `<!doctype html><html lang="${en?'en':'zh-CN'}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(p.title)} | Sun-Shine.ai</title><meta name="description" content="${esc(p.description)}"><link rel="icon" href="/sun-shine-logo.png"><link rel="stylesheet" href="/site.css"><link rel="alternate" hreflang="${en?'zh-CN':'en'}" href="${other}"><script src="/site.js" defer></script></head><body><a class="skip-link" href="#main">${t('跳到正文','Skip to content')}</a><header class="site-header"><div class="container header-inner"><a class="brand" href="${url('')}" aria-label="SunShine ${t('首页','home')}"><img src="/sun-shine-logo.png" width="40" height="40" alt="">sunshine<span>.ai</span></a><nav class="site-nav" id="site-nav" aria-label="${t('主导航','Main navigation')}">${nav}</nav><div class="header-actions"><a class="language-toggle" href="${other}" lang="${en?'zh-CN':'en'}" data-language="${en?'zh':'en'}">${en?'中文':'EN'}</a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">${t('菜单','Menu')}</button></div></div></header><main id="main" class="site-main">${p.body}</main><footer class="site-footer"><div class="container footer-inner"><p>© 2026 Sun-Shine.ai · ${t('顺晟智能','From understanding to growth')}</p><div class="page-links">${nav}</div></div></footer></body></html>`;
     const dest = path.join(out,en?'en':'',route,'index.html');
-    fs.mkdirSync(path.dirname(dest),{recursive:true}); fs.writeFileSync(dest,html);
+    fs.mkdirSync(path.dirname(dest),{recursive:true}); fs.writeFileSync(dest,html); written++;
   }
 }
-console.log('Built 26 pages: bilingual homepage, seven business pages, two case studies, and three articles per language.');
+// Counted, not written down: this line said 26 pages and two case studies
+// while a third was being added, and a build log that has to be edited by
+// hand is a log that will be wrong again.
+console.log(`Built ${written} pages: bilingual homepage, seven business pages, ${extra.zh.cases.length} case studies, and ${extra.zh.posts.length} articles per language.`);
