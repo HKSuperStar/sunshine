@@ -67,6 +67,20 @@ module.exports = {
           ['内容与达人协作', '由达人筛选与家庭场景匹配（含多猫家庭与不同猫砂习惯）、跨周期简报与使用回访、用户素材收集与授权、健康与除味表述的平台合规审核、社群答疑等 Agent 分工协作，把分散在各平台后台、私信、达人群聊和表格中的信号组织起来。'],
           ['业务结果', '让每条素材都记录来源场景与使用时长，每次达人合作在跨周的体验周期内可追踪，通过审核的表述沉淀为可复用的文案资产，平台声量与站内转化能够关联，为后续选题、合规口径和预算分配积累数据资产。']
         ]
+      },
+      {
+        slug: 'robot-lawn-mower',
+        eyebrow: 'CASE STUDIES',
+        title: 'Robotic Lawn Mower Global Social Agentic',
+        summary: '自动割草机品类的海外社媒内容营销，把只开放数月的割草季、必须单独生产的安装与边界设置内容、以及多种真实庭院的演示条件连接起来，让排期与素材来源都有记录可查。',
+        description: 'Robotic Lawn Mower Global Social Agentic 面向自动割草机品类的海外社媒内容营销，把压缩在割草季内的内容排期、安装与边界设置这一类独立内容、覆盖不同坡度与草种的真实庭院素材，以及受审视的安全表述连接起来，让庭院户外品类出海团队从零散的内容投放，走向由 Agent 驱动、由人审批的内容协作流程。',
+        sectionTitle: '庭院户外品类内容与 Agent 协作',
+        imageAlt: 'Robotic Lawn Mower Global Social Agentic 自动割草机海外社媒内容 Agent 协作插画',
+        items: [
+          ['项目背景', '自动割草机的内容排期受季节硬约束：草在每个半球只有数月生长期，演示、评测与达人档期都被压缩在旺季，淡季能做的是选型教育与预售内容，而不是草坪实拍——这一点与全年可拍的室内品类完全不同。草坪本身也不可迁移，坡度、草种、面积与障碍物各不相同，一块草坪上成立的演示换一块未必成立。产品并非开箱即用，铺设边界线或用 RTK、视觉方式建图是购前最大的疑虑之一；户外刀片与儿童、宠物共处同一空间，安全相关表述会同时受到平台和买家审视。'],
+          ['内容与达人协作', '由旺季排期与达人档期协调（降雨与草的生长速度会导致改期，需要预留备选窗口）、按草坪条件匹配达人庭院（坡度、草种、面积与障碍物分布）、安装与边界设置内容的单独立项（边界线铺设与 RTK、视觉建图各成一条内容线）、刀片与安全表述的平台合规审核、淡季选型教育与预售选题、社群答疑等 Agent 分工协作，把分散在各平台后台、私信、达人群聊和表格中的信号组织起来。'],
+          ['业务结果', '让每条素材都记录拍摄季节与所在草坪的条件，安装与建图类内容按方式归档成可反复调用的答疑素材，因天气改期的原因与替换窗口有迹可循，通过审核的安全表述沉淀为可复用的文案资产，平台声量与站内转化能够关联，为淡旺季的选题安排、合规口径和预算分配积累数据资产。']
+        ]
       }
     ],
     posts: [
@@ -173,6 +187,20 @@ module.exports = {
           ['The challenge', 'A self-cleaning litter box sells into overseas markets where content depends on footage from real cat-owning homes, and staged shots convince few buyers. The person paying is the owner and the one using it is the cat, so content has to answer the owner\'s concerns about odor, hygiene, and safety while showing how the cat actually comes to accept the device. The product also needs weeks of continuous use before the footage is credible, so creator timelines look nothing like fast-moving consumer electronics.'],
           ['Content & creator collaboration', 'Creator screening and household matching (including multi-cat homes and different litter habits), briefing and check-ins across a multi-week usage cycle, user-generated footage collection and usage rights, compliance review of health and odor wording for each platform, and community response Agents organize signals scattered across platform inboxes, DMs, creator chats, and spreadsheets.'],
           ['Business result', 'Every asset records the household it came from and how long the product had been in use, every creator collaboration stays traceable across a cycle that runs for weeks, wording that cleared review becomes a reusable copy asset, and platform reach connects to on-site conversion, building a data foundation for topic planning, compliance language, and budget allocation.']
+        ]
+      },
+      {
+        slug: 'robot-lawn-mower',
+        eyebrow: 'CASE STUDIES',
+        title: 'Robotic Lawn Mower Global Social Agentic',
+        summary: 'Social content marketing for the robotic lawn mower category, connecting a mowing season that stays open for only part of the year, installation and boundary setup as a content line of its own, and demos that have to hold up across many different lawns.',
+        description: 'Robotic Lawn Mower Global Social Agentic connects content scheduling compressed into the mowing season, installation and boundary setup treated as a separate content line, footage from real yards that differ in slope and grass type, and safety wording that draws scrutiny, helping an outdoor and yard product team selling overseas move from scattered content campaigns to Agent-driven workflows with human approval.',
+        sectionTitle: 'Outdoor yard product content & Agent collaboration',
+        imageAlt: 'Robotic Lawn Mower Global Social Agentic robotic lawn mower social content Agent collaboration illustration',
+        items: [
+          ['The challenge', 'Scheduling for a robotic lawn mower is bound by the season: grass grows for only part of the year in each hemisphere, so demos, reviews, and creator availability all compress into the mowing months, while the off-season supports buying-guide and pre-order content rather than footage of a working lawn. Indoor categories can be filmed year-round; this one cannot. A lawn is not portable either, since slope, grass type, area, and obstacles differ from yard to yard, so a demo that holds up on one lawn may not hold up on the next. The product is also not ready out of the box: laying a boundary wire, or mapping the yard with RTK or vision, is one of the largest pre-purchase concerns. And with blades running outdoors where children and pets share the same space, safety wording is examined by platforms and buyers alike.'],
+          ['Content & creator collaboration', 'In-season scheduling and creator availability (rainfall and the pace of grass growth force reschedules, so backup windows have to be held), creator matching by lawn conditions (slope, grass type, area, and how obstacles are laid out), installation and boundary setup planned as its own content line (boundary wire and RTK or vision mapping each run as a separate track), platform compliance review of blade and safety wording, off-season buying-guide and pre-order topics, and community response Agents organize signals scattered across platform inboxes, DMs, creator chats, and spreadsheets.'],
+          ['Business result', 'Every asset records the season it was shot in and the lawn conditions it was shot on, installation and mapping content is filed by method so it can be reused to answer the same questions, weather reschedules keep a record of why they moved and which window replaced them, safety wording that cleared review becomes a reusable copy asset, and platform reach connects to on-site conversion, building a data foundation for in-season and off-season topic planning, compliance language, and budget allocation.']
         ]
       }
     ],

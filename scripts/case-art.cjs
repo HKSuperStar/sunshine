@@ -72,6 +72,63 @@ module.exports = function caseArt(slug, alt) {
 <g fill="#e9c982"><circle cx="548" cy="790" r="6.5"/><circle cx="676" cy="742" r="6.5"/><circle cx="924" cy="742" r="6.5"/><circle cx="1052" cy="790" r="6.5"/></g>
 <circle cx="800" cy="790" r="25" fill="#b58a39"/>
 <circle cx="800" cy="790" r="9" fill="#f2f5ed"/>
+</svg>`,
+    'robot-lawn-mower': `<svg class="feature-image" viewBox="0 0 1600 900" role="img" aria-label="${alt}" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="900" fill="#f2f5ed"/>
+<rect x="360" y="170" width="880" height="560" rx="72" fill="#fff" opacity=".55"/>
+<g opacity=".5">
+<rect x="392" y="214" width="816" height="34" rx="17" fill="#cad8cf"/>
+<rect x="392" y="290" width="816" height="34" rx="17" fill="#cad8cf"/>
+<rect x="392" y="366" width="816" height="34" rx="17" fill="#cad8cf"/>
+<rect x="392" y="442" width="816" height="34" rx="17" fill="#cad8cf"/>
+<rect x="392" y="518" width="816" height="34" rx="17" fill="#cad8cf"/>
+<rect x="392" y="594" width="816" height="34" rx="17" fill="#cad8cf"/>
+</g>
+<rect x="360" y="170" width="880" height="560" rx="72" fill="none" stroke="#b58a39" stroke-width="4" stroke-dasharray="14 12"/>
+<circle cx="360" cy="450" r="11" fill="#b58a39"/>
+<circle cx="1240" cy="450" r="11" fill="#b58a39"/>
+<path d="M470 640H700A40 40 0 0 0 740 600V520A40 40 0 0 1 780 480" fill="none" stroke="#3a5566" stroke-width="3" stroke-dasharray="7 11" opacity=".75"/>
+<g transform="translate(800,450)">
+<path d="M-118,-88H74A64 64 0 0 1 74,88H-118A30 30 0 0 1-148,58V-58A30 30 0 0 1-118,-88Z" fill="#122c3a"/>
+<path d="M74,-88A64 64 0 0 1 74,88" fill="none" stroke="#e9c982" stroke-width="5"/>
+<circle cx="-18" cy="0" r="54" fill="#0d2029"/>
+<circle cx="-18" cy="0" r="54" fill="none" stroke="#3a5566" stroke-width="2"/>
+<g fill="#e9c982">
+<path d="M-18,0 -60,-16A44 44 0 0 1-30,-42Z"/>
+<path d="M-18,0 6,-38A44 44 0 0 1 22,14Z"/>
+<path d="M-18,0 12,32A44 44 0 0 1-42,38Z"/>
+</g>
+<circle cx="-18" cy="0" r="10" fill="#b58a39"/>
+<path d="M-18,-72A72 72 0 0 1 44,-36" fill="none" stroke="#b58a39" stroke-width="4" stroke-dasharray="6 9"/>
+<path d="M36,-48L58,-30L32,-22Z" fill="#b58a39"/>
+<rect x="-112" y="-62" width="46" height="10" rx="5" fill="#3a5566"/>
+<rect x="-112" y="-44" width="30" height="8" rx="4" fill="#3a5566"/>
+<rect x="-104" y="-106" width="58" height="26" rx="12" fill="#3a5566"/>
+<rect x="30" y="-106" width="58" height="26" rx="12" fill="#3a5566"/>
+<rect x="-104" y="80" width="58" height="26" rx="12" fill="#3a5566"/>
+<rect x="30" y="80" width="58" height="26" rx="12" fill="#3a5566"/>
+</g>
+<path d="M800 364V300" stroke="#b58a39" stroke-width="3" stroke-dasharray="5 9"/>
+<path d="M682 450L520 450" stroke="#b58a39" stroke-width="3" stroke-dasharray="5 9"/>
+<path d="M918 450L1080 450" stroke="#b58a39" stroke-width="3" stroke-dasharray="5 9"/>
+<path d="M800 536V620" stroke="#b58a39" stroke-width="3" stroke-dasharray="5 9"/>
+<circle cx="800" cy="240" r="60" fill="#fff" stroke="#cad8cf"/>
+<circle cx="800" cy="240" r="20" fill="#e9c982"/>
+<g stroke="#b58a39" stroke-width="3" stroke-linecap="round">
+<path d="M800 206v-12M800 286v12M766 240h-12M846 240h12M776 216l-9-9M824 264l9 9M824 216l9-9M776 264l-9 9"/>
+</g>
+<circle cx="460" cy="450" r="60" fill="#fff" stroke="#cad8cf"/>
+<path d="M460 418c16 22 24 34 24 44a24 24 0 0 1-48 0c0-10 8-22 24-44Z" fill="#3a5566"/>
+<circle cx="1140" cy="450" r="60" fill="#fff" stroke="#cad8cf"/>
+<rect x="1110" y="424" width="60" height="52" rx="8" fill="none" stroke="#122c3a" stroke-width="3"/>
+<path d="M1110 440h60" stroke="#122c3a" stroke-width="3"/>
+<rect x="1122" y="452" width="14" height="12" rx="3" fill="#b58a39"/>
+<rect x="1144" y="452" width="14" height="12" rx="3" fill="#cad8cf"/>
+<circle cx="800" cy="660" r="60" fill="#fff" stroke="#cad8cf"/>
+<path d="M786 638l34 22-34 22Z" fill="#122c3a"/>
+<path d="M596 690A230 230 0 0 0 1004 690" fill="none" stroke="#e9c982" stroke-width="3" opacity=".45" stroke-dasharray="3 8"/>
+<path d="M560 300l10 26 26 10-26 10-10 26-10-26-26-10 26-10Z" fill="#b58a39" opacity=".8"/>
+<path d="M1046 296l8 21 21 8-21 8-8 21-8-21-21-8 21-8Z" fill="#b58a39" opacity=".55"/>
 </svg>`
   };
   return art[slug];
