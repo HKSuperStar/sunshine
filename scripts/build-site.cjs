@@ -52,7 +52,12 @@ for (const lang of ['zh', 'en']) {
   for (const c of X.cases) {
     const media = c.video ? `<div class="about-hero-video"><video src="/video/${esc(c.video)}" poster="${c.image?'/img/'+esc(c.image):''}" autoplay muted loop playsinline controls preload="metadata" aria-label="${esc(c.videoLabel)}"></video></div>` : '';
     const figure = c.image ? `<img class="feature-image" src="/img/${esc(c.image)}" width="1672" height="941" alt="${esc(c.imageAlt)}" loading="lazy">` : caseArt(c.slug, esc(c.imageAlt));
-    pages['cases/'+c.slug] = {title:c.title,description:c.description,body:media+hero(c.eyebrow,c.title,c.description)+section(c.sectionTitle,`${figure}<div class="grid three">${cards(c.items)}</div><div class="actions">${button('contact',t('讨论类似项目','Discuss a similar project'))}${button('cases',t('查看全部案例','All case studies'))}</div>`)};
+    // A deep dive is a layer below its case study, never a sixth case: it is
+    // reachable from the detail page only, so caseCards (and the case list) stay untouched.
+    const deep = c.deepDive;
+    const deepEntry = deep ? button('cases/'+c.slug+'/'+deep.slug, deep.linkLabel) : '';
+    pages['cases/'+c.slug] = {title:c.title,description:c.description,body:media+hero(c.eyebrow,c.title,c.description)+section(c.sectionTitle,`${figure}<div class="grid three">${cards(c.items)}</div><div class="actions">${deepEntry}${button('contact',t('讨论类似项目','Discuss a similar project'))}${button('cases',t('查看全部案例','All case studies'))}</div>`)};
+    if (deep) pages['cases/'+c.slug+'/'+deep.slug] = {title:deep.title,description:deep.summary,body:hero(deep.eyebrow,deep.title,deep.summary)+`<article class="container article">${deep.sections.map(([h,body])=>`<section><h2>${esc(h)}</h2><p>${esc(body)}</p></section>`).join('')}<div class="actions">${button('cases/'+c.slug,t('返回案例','Back to the case study'))}${button('contact',t('讨论你的项目','Discuss your project'))}</div></article>`};
   }
   for (const [route,p] of Object.entries(pages)) {
     const other = `${en ? '' : '/en'}/${route ? route+'/' : ''}`;
@@ -65,4 +70,5 @@ for (const lang of ['zh', 'en']) {
 // Counted, not written down: this line said 26 pages and two case studies
 // while a third was being added, and a build log that has to be edited by
 // hand is a log that will be wrong again.
-console.log(`Built ${written} pages: bilingual homepage, seven business pages, ${extra.zh.cases.length} case studies, and ${extra.zh.posts.length} articles per language.`);
+const deepDives = extra.zh.cases.filter(c => c.deepDive).length;
+console.log(`Built ${written} pages: bilingual homepage, seven business pages, ${extra.zh.cases.length} case studies${deepDives ? ` (${deepDives} with a deep-dive page)` : ''}, and ${extra.zh.posts.length} articles per language.`);
