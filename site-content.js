@@ -41,7 +41,7 @@ module.exports = {
         ]
       },
       {
-        slug: 'eureka',
+        slug: 'robot-vacuum',
         eyebrow: 'CASE STUDIES',
         title: 'Robot Vacuum Global Social Agentic',
         summary: '扫地机器人品类的海外社媒内容营销，把多平台内容、达人协作与转化数据连接起来，让投放动作变成可复用的增长系统。',
@@ -194,7 +194,7 @@ module.exports = {
         ]
       },
       {
-        slug: 'eureka',
+        slug: 'robot-vacuum',
         eyebrow: 'CASE STUDIES',
         title: 'Robot Vacuum Global Social Agentic',
         summary: 'Social content marketing for the robot vacuum category, connecting multi-platform content, creator collaboration, and conversion data into one repeatable growth system.',

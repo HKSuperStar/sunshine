@@ -1,4 +1,26 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "redirects": [
+    {
+      "source": "/cases/eureka",
+      "destination": "/cases/robot-vacuum",
+      "permanent": true
+    },
+    {
+      "source": "/cases/eureka/",
+      "destination": "/cases/robot-vacuum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/eureka",
+      "destination": "/en/cases/robot-vacuum",
+      "permanent": true
+    },
+    {
+      "source": "/en/cases/eureka/",
+      "destination": "/en/cases/robot-vacuum/",
+      "permanent": true
+    }
+  ]
 }

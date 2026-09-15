@@ -7,15 +7,14 @@ vm.runInNewContext(fs.readFileSync('sunshine-content.js', 'utf8'), sandbox);
 const existing = sandbox.window.SUNSHINE_CONTENT.languages;
 const extra = require('../site-content.js');
 const out = 'public';
+// Nothing here was ever deleted, only written over, so anything the build stopped
+// producing stayed behind and kept shipping: a replaced image, and -- because pages are
+// directories named after a slug -- every page of a case study that was renamed, which
+// then still answered on its old URL instead of redirecting. public/ is entirely build
+// output and gitignored, so clear it and let every deploy carry exactly what this run made.
+fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });
-// cpSync copies but never deletes, so an asset removed from img/ or video/ survived in
-// public/ and kept shipping with every deploy. Clear each destination first so the output
-// is exactly what the source holds.
-for (const folder of ['img', 'video']) {
-  const dest = path.join(out, folder);
-  fs.rmSync(dest, { recursive: true, force: true });
-  fs.cpSync(folder, dest, { recursive: true });
-}
+for (const folder of ['img', 'video']) fs.cpSync(folder, path.join(out, folder), { recursive: true });
 for (const file of ['sun-shine-logo.png', 'sunshine-signal-flow.svg']) fs.copyFileSync(file, path.join(out, file));
 fs.copyFileSync('src/site.css', path.join(out, 'site.css'));
 fs.copyFileSync('site.js', path.join(out, 'site.js'));
