@@ -12,6 +12,11 @@ for (const folder of ['img', 'video']) fs.cpSync(folder, path.join(out, folder),
 for (const file of ['sun-shine-logo.png', 'sunshine-signal-flow.svg']) fs.copyFileSync(file, path.join(out, file));
 fs.copyFileSync('src/site.css', path.join(out, 'site.css'));
 fs.copyFileSync('site.js', path.join(out, 'site.js'));
+// Width and height were hardcoded to 1672x941 -- the size of the one case image that
+// existed. A second image of any other size would have been served with the first one's
+// aspect ratio, reserving the wrong box and shifting the layout as it loads. Read the
+// real size from the PNG header (IHDR: width at byte 16, height at byte 20).
+const pngSize = file => { const b = fs.readFileSync(path.join('img', file)); return {w: b.readUInt32BE(16), h: b.readUInt32BE(20)}; };
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 let written = 0;
 const routes = ['about', 'products', 'cases', 'blog', 'faq', 'contact'];
@@ -52,7 +57,8 @@ for (const lang of ['zh', 'en']) {
   for (const p of X.posts) pages['blog/'+p.slug] = {title:p.title,description:p.summary,body:hero(p.category,p.title,p.summary)+`<article class="container article">${p.sections.map(([h,body])=>`<section><h2>${esc(h)}</h2><p>${esc(body)}</p></section>`).join('')}<div class="actions">${button('blog',t('返回博客','Back to blog'))}${button('contact',t('讨论你的项目','Discuss your project'))}</div></article>`};
   for (const c of X.cases) {
     const media = c.video ? `<div class="about-hero-video"><video src="/video/${esc(c.video)}" poster="${c.image?'/img/'+esc(c.image):''}" autoplay muted loop playsinline controls preload="metadata" aria-label="${esc(c.videoLabel)}"></video></div>` : '';
-    const figure = c.image ? `<img class="feature-image" src="/img/${esc(c.image)}" width="1672" height="941" alt="${esc(c.imageAlt)}" loading="lazy">` : caseArt(c.slug, esc(c.imageAlt));
+    const size = c.image ? pngSize(c.image) : null;
+    const figure = c.image ? `<img class="feature-image" src="/img/${esc(c.image)}" width="${size.w}" height="${size.h}" alt="${esc(c.imageAlt)}" loading="lazy">` : caseArt(c.slug, esc(c.imageAlt));
     // A deep dive is a layer below its case study, never a sixth case: it is
     // reachable from the detail page only, so caseCards (and the case list) stay untouched.
     const deep = c.deepDive;

@@ -43,11 +43,12 @@ module.exports = {
       {
         slug: 'eureka',
         eyebrow: 'CASE STUDIES',
-        title: 'Eureka Robot Vacuum Global Social Agentic',
-        summary: 'Eureka 把多平台内容、达人协作与转化数据连接起来，让社媒营销从投放动作变成可复用的增长系统。',
-        description: 'Eureka Robot Vacuum Global Social Agentic 将 TikTok、Instagram、YouTube 与社区内容、达人合作和站内转化连接起来，让智能家电出海团队从分散的内容投放，走向由 Agent 驱动、由人审批的社媒增长协作流程。',
+        title: 'Robot Vacuum Global Social Agentic',
+        summary: '扫地机器人品类的海外社媒内容营销，把多平台内容、达人协作与转化数据连接起来，让投放动作变成可复用的增长系统。',
+        description: 'Robot Vacuum Global Social Agentic 将 TikTok、Instagram、YouTube 与社区内容、达人合作和站内转化连接起来，让智能家电出海团队从分散的内容投放，走向由 Agent 驱动、由人审批的社媒增长协作流程。',
         sectionTitle: '全球社媒营销与 Agent 协作',
-        imageAlt: 'Eureka Robot Vacuum Global Social Agentic 全球社媒营销 Agent 协作插画',
+        imageAlt: 'Robot Vacuum Global Social Agentic 扫地机器人品类海外社媒账号内容矩阵：短视频封面按家居场景与清洁演示排列',
+        image: 'robot-vacuum-social-grid.png',
         items: [
           ['项目背景', '面向海外市场的智能家电品牌，需要同时经营 TikTok、Instagram、YouTube 与社区内容，并协调多位达人的合作节奏、简报和素材审核。'],
           ['内容与达人协作', '由选题策划、达人匹配与简报、内容审核与合规、社群互动等 Agent 分工协作，把分散在各平台后台、私信和表格中的信号组织起来。'],
@@ -61,7 +62,8 @@ module.exports = {
         summary: '自动清洁猫砂盆品类的海外社媒内容营销，把真实养宠场景、长周期达人合作与平台合规审核连接起来，让素材来源与合作节奏都有记录可查。',
         description: 'Self-Cleaning Litter Box Global Social Agentic 面向自动清洁猫砂盆品类的海外社媒内容营销，把真实养宠家庭的使用素材、跨周的达人合作节奏与平台合规审核连接起来，让宠物用品出海团队从零散的内容投放，走向由 Agent 驱动、由人审批的内容协作流程。',
         sectionTitle: '宠物用品出海内容与 Agent 协作',
-        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic 自动清洁猫砂盆海外社媒内容 Agent 协作插画',
+        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic 自动清洁猫砂盆品类海外社媒账号内容矩阵：短视频封面按家庭场景与清理演示排列',
+        image: 'litter-box-social-grid.png',
         items: [
           ['项目背景', '自动清洁猫砂盆面向海外市场，内容高度依赖真实养宠家庭的使用画面，摆拍素材说服力有限；买单的是主人、使用的是猫，内容既要回应主人对除味、卫生和安全的顾虑，也要呈现猫对设备的真实接受过程。产品还需要连续使用数周才能积累可信素材，达人合作节奏与 3C 快消完全不同。'],
           ['内容与达人协作', '由达人筛选与家庭场景匹配（含多猫家庭与不同猫砂习惯）、跨周期简报与使用回访、用户素材收集与授权、健康与除味表述的平台合规审核、社群答疑等 Agent 分工协作，把分散在各平台后台、私信、达人群聊和表格中的信号组织起来。'],
@@ -104,7 +106,8 @@ module.exports = {
         summary: '女性运动休闲服装品类的海外 SEO 与 GEO 内容营销，把天生文本稀薄的商品页、买家用身体和场景提出的问题，以及答案引擎愿意引用的可核对表述连接起来，让内容与证据来源都有记录可查。',
         description: 'Women\'s Athleisure Global SEO & GEO Agentic 面向女性运动休闲服装品类的海外搜索与答案引擎内容营销，把买家问法与商品目录款式名之间的落差、既是购买障碍又是内容资产的合身与尺码问题、可归因到来源的面料与版型表述，以及趋势内容与长效内容之间的排期取舍连接起来，让服装出海团队从零散的商品页文案，走向由 Agent 驱动、由人审批的内容协作流程。',
         sectionTitle: '服装品类搜索可见度与 Agent 协作',
-        imageAlt: 'Women\'s Athleisure Global SEO & GEO Agentic 女性运动休闲服装海外 SEO 与 GEO 内容 Agent 协作插画',
+        imageAlt: 'Women\'s Athleisure Global SEO & GEO Agentic 女性运动休闲服装：身着运动背心与紧身裤的上身实穿画面，展示面料质地与版型贴合',
+        image: 'womens-athleisure-fit.png',
         items: [
           ['项目背景', '时装商品页天生文本稀薄：行业惯例是几张图加两行文案，除尺码表外几乎没有成段的可检索文字，搜索引擎没什么可排，答案引擎也没什么可引——这是品类的结构性问题，与有规格表、有参数可写的制造业完全不同。买家提问用的又是身体和场景的语言：不下滑的打底裤、深蹲时透不透、小个子该选多长的裤长、产后能不能穿；商家目录则按款式名与系列名归类，两套说法对不上，把买家的问法与自家商品搭上桥因此成为主要工作。合身与尺码既是最大的购买障碍，也正是最有价值的内容资产——“我能穿吗”的答案散落在评论和尺码说明里，而那恰恰是答案引擎想引用的东西。能被引用还有一个前提：表述要具体到可归因。面料成分、裤长区间、不透光测试这类可核对的事实才引得动，“奶油般柔软”“显瘦”这类形容词既无法被引用，也无从验证。内容的寿命也不一样，趋势款与流行色的内容衰减很快，合身、洗护与搭配的内容则会持续累积，两者之间的预算与排期取舍是要真做的决定。而压缩、支撑、塑形这类功效表述本身有边界，写过头既过不了合规，也经不起买家回头核对。'],
           ['内容与协作', '由买家问法收集与归类（把客服问答、评论与站内搜索里反复出现的问法按合身、尺码、面料、场景与洗护分组，每条标明目标市场与语言）、问法与商品目录的映射维护（把身体与场景的说法对上款式名、面料与版型属性，让同一件商品在不同问法下都能被找到，新款上架时按同一套对应关系归位）、商品页文本补足（把上身效果、适配的体型条件与不适用的情形写成可检索的文字，而不是留在图片里）、可引用表述的证据归口（面料成分、裤长区间、不透光与洗护说明各自指定可核对的资料与维护负责人，尚未确认的先回到内部核实再发布）、功效与尺码口径的合规复核（压缩、支撑、塑形一类说法按各市场的口径把关，不同市场的尺码换算分别成文，中英文页面保持事实与适用条件一致）、趋势内容与长效内容的排期分离（趋势款按季投入，合身、洗护与搭配内容进入长期维护队列）等 Agent 分工协作，把分散在搜索后台、商品目录、评论与客服问答、尺码表和表格中的信号组织起来。'],
@@ -193,11 +196,12 @@ module.exports = {
       {
         slug: 'eureka',
         eyebrow: 'CASE STUDIES',
-        title: 'Eureka Robot Vacuum Global Social Agentic',
-        summary: 'Eureka connects multi-platform content, creator collaboration, and conversion data into one repeatable social growth system.',
-        description: 'Eureka Robot Vacuum Global Social Agentic connects TikTok, Instagram, YouTube, and community content with creator collaboration and on-site conversion, helping a smart home appliance team move from scattered social campaigns to Agent-driven workflows with human approval.',
+        title: 'Robot Vacuum Global Social Agentic',
+        summary: 'Social content marketing for the robot vacuum category, connecting multi-platform content, creator collaboration, and conversion data into one repeatable growth system.',
+        description: 'Robot Vacuum Global Social Agentic connects TikTok, Instagram, YouTube, and community content with creator collaboration and on-site conversion, helping a smart home appliance team move from scattered social campaigns to Agent-driven workflows with human approval.',
         sectionTitle: 'Global social marketing & Agent collaboration',
-        imageAlt: 'Eureka Robot Vacuum Global Social Agentic global social marketing Agent collaboration illustration',
+        imageAlt: 'Robot Vacuum Global Social Agentic robot vacuum social account content grid: short-form video covers arranged by home scene and cleaning demonstration',
+        image: 'robot-vacuum-social-grid.png',
         items: [
           ['The challenge', 'A smart home appliance brand selling overseas needed to run TikTok, Instagram, YouTube, and community content at the same time, while coordinating multiple creators\' briefs, timelines, and asset reviews.'],
           ['Content & creator collaboration', 'Topic planning, creator matching and briefing, content review and compliance, and community engagement Agents organize signals scattered across platform inboxes, DMs, and spreadsheets.'],
@@ -211,7 +215,8 @@ module.exports = {
         summary: 'Social content marketing for the self-cleaning cat litter box category, connecting footage from real cat-owning homes, creator collaboration that runs across weeks, and platform compliance review.',
         description: 'Self-Cleaning Litter Box Global Social Agentic connects usage footage from real cat-owning households, creator collaboration that runs across weeks, and platform compliance review, helping a pet product team selling overseas move from scattered content campaigns to Agent-driven workflows with human approval.',
         sectionTitle: 'Pet product content & Agent collaboration',
-        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic pet product social content Agent collaboration illustration',
+        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic pet product social account content grid: short-form video covers arranged by household scene and cleaning demonstration',
+        image: 'litter-box-social-grid.png',
         items: [
           ['The challenge', 'A self-cleaning litter box sells into overseas markets where content depends on footage from real cat-owning homes, and staged shots convince few buyers. The person paying is the owner and the one using it is the cat, so content has to answer the owner\'s concerns about odor, hygiene, and safety while showing how the cat actually comes to accept the device. The product also needs weeks of continuous use before the footage is credible, so creator timelines look nothing like fast-moving consumer electronics.'],
           ['Content & creator collaboration', 'Creator screening and household matching (including multi-cat homes and different litter habits), briefing and check-ins across a multi-week usage cycle, user-generated footage collection and usage rights, compliance review of health and odor wording for each platform, and community response Agents organize signals scattered across platform inboxes, DMs, creator chats, and spreadsheets.'],
@@ -254,7 +259,8 @@ module.exports = {
         summary: 'SEO and GEO content marketing for the women\'s athleisure category, connecting product pages that carry almost no text, the questions buyers ask in the language of bodies and occasions, and the kind of checkable statement an answer engine is willing to quote.',
         description: 'Women\'s Athleisure Global SEO & GEO Agentic works on search and answer-engine content for the women\'s athleisure category, connecting the gap between how buyers ask and how a catalog names its styles, fit and sizing as both the largest barrier to purchase and the most valuable content asset, fabric and fit statements that can be traced back to a source, and the scheduling trade-off between trend content and content that accumulates, helping an apparel team selling overseas move from scattered product-page copy to Agent-driven workflows with human approval.',
         sectionTitle: 'Apparel search visibility & Agent collaboration',
-        imageAlt: 'Women\'s Athleisure Global SEO & GEO Agentic women\'s athleisure SEO and GEO content Agent collaboration illustration',
+        imageAlt: 'Women\'s Athleisure Global SEO & GEO Agentic women\'s athleisure worn on the body in a sports top and leggings, showing fabric texture and how the garment sits',
+        image: 'womens-athleisure-fit.png',
         items: [
           ['The challenge', 'Fashion product pages are thin by convention: a few photos and two lines of copy, with little continuous text beyond a size chart, which leaves a search engine little to rank and an answer engine little to quote — a structural problem in this category, unlike manufacturing where there are specifications and parameters to write about. Buyers, meanwhile, ask in the language of bodies and occasions: leggings that stay up, whether the fabric stays opaque in a squat, what inseam suits someone petite, whether something works postpartum. The catalog is organized by style and collection names, the two vocabularies do not meet, and bridging them becomes the main work. Fit and sizing are the largest barrier to purchase and at the same time the most valuable content asset — the answer to “will this fit me” is scattered through reviews and sizing notes, which is exactly what answer engines want to quote. Being quotable has a further condition: a statement has to be specific enough to attribute. Fabric composition, inseam ranges, and opacity testing are checkable and can carry a citation; “buttery soft” and “flattering” can be neither quoted nor verified. Content also ages at different rates, since trend styles and seasonal colors decay quickly while fit, care, and styling content keeps accumulating, and the budget and scheduling choice between them is a real decision. Performance wording has limits of its own: compression, support, and shaping cannot be overstated, or the copy fails both compliance review and the buyer who checks it later.'],
           ['Content & collaboration', 'Collecting and grouping how buyers ask (recurring questions from customer service threads, reviews, and on-site search, grouped by fit, sizing, fabric, occasion, and care, each tagged with target market and language), maintaining the mapping between those questions and the catalog (body and occasion wording matched to style names, fabric, and fit attributes so one garment can be found through several different questions, with each new drop filed against the same mapping), filling in product-page text (how a garment sits, the builds it suits, and where it does not apply, written as text that can be retrieved rather than left inside photos), evidence ownership for quotable statements (fabric composition, inseam ranges, opacity, and care instructions each point to documentation that can be checked and a named maintainer, with anything unconfirmed going back for internal verification before publication), compliance review of performance and sizing wording (compression, support, and shaping checked against each market\'s rules, sizing conversions written out per market, and Chinese and English pages keeping the same facts and conditions), and separating trend scheduling from durable content (trend styles funded by season while fit, care, and styling content enters a long-term maintenance queue) Agents organize signals scattered across search consoles, the product catalog, reviews and customer service threads, size charts, and spreadsheets.'],
