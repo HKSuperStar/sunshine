@@ -8,7 +8,14 @@ const existing = sandbox.window.SUNSHINE_CONTENT.languages;
 const extra = require('../site-content.js');
 const out = 'public';
 fs.mkdirSync(out, { recursive: true });
-for (const folder of ['img', 'video']) fs.cpSync(folder, path.join(out, folder), { recursive: true });
+// cpSync copies but never deletes, so an asset removed from img/ or video/ survived in
+// public/ and kept shipping with every deploy. Clear each destination first so the output
+// is exactly what the source holds.
+for (const folder of ['img', 'video']) {
+  const dest = path.join(out, folder);
+  fs.rmSync(dest, { recursive: true, force: true });
+  fs.cpSync(folder, dest, { recursive: true });
+}
 for (const file of ['sun-shine-logo.png', 'sunshine-signal-flow.svg']) fs.copyFileSync(file, path.join(out, file));
 fs.copyFileSync('src/site.css', path.join(out, 'site.css'));
 fs.copyFileSync('site.js', path.join(out, 'site.js'));

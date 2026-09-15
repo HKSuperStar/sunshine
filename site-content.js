@@ -62,8 +62,8 @@ module.exports = {
         summary: '自动清洁猫砂盆品类的海外社媒内容营销，把真实养宠场景、长周期达人合作与平台合规审核连接起来，让素材来源与合作节奏都有记录可查。',
         description: 'Self-Cleaning Litter Box Global Social Agentic 面向自动清洁猫砂盆品类的海外社媒内容营销，把真实养宠家庭的使用素材、跨周的达人合作节奏与平台合规审核连接起来，让宠物用品出海团队从零散的内容投放，走向由 Agent 驱动、由人审批的内容协作流程。',
         sectionTitle: '宠物用品出海内容与 Agent 协作',
-        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic 自动清洁猫砂盆品类海外社媒账号内容矩阵：短视频封面按家庭场景与清理演示排列',
-        image: 'litter-box-social-grid.png',
+        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic 自动清洁猫砂盆品类海外社媒搜索结果页：多位达人围绕同一品类产出的短视频，含付费合作标注',
+        image: 'litter-box-social-search.png',
         items: [
           ['项目背景', '自动清洁猫砂盆面向海外市场，内容高度依赖真实养宠家庭的使用画面，摆拍素材说服力有限；买单的是主人、使用的是猫，内容既要回应主人对除味、卫生和安全的顾虑，也要呈现猫对设备的真实接受过程。产品还需要连续使用数周才能积累可信素材，达人合作节奏与 3C 快消完全不同。'],
           ['内容与达人协作', '由达人筛选与家庭场景匹配（含多猫家庭与不同猫砂习惯）、跨周期简报与使用回访、用户素材收集与授权、健康与除味表述的平台合规审核、社群答疑等 Agent 分工协作，把分散在各平台后台、私信、达人群聊和表格中的信号组织起来。'],
@@ -215,8 +215,8 @@ module.exports = {
         summary: 'Social content marketing for the self-cleaning cat litter box category, connecting footage from real cat-owning homes, creator collaboration that runs across weeks, and platform compliance review.',
         description: 'Self-Cleaning Litter Box Global Social Agentic connects usage footage from real cat-owning households, creator collaboration that runs across weeks, and platform compliance review, helping a pet product team selling overseas move from scattered content campaigns to Agent-driven workflows with human approval.',
         sectionTitle: 'Pet product content & Agent collaboration',
-        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic pet product social account content grid: short-form video covers arranged by household scene and cleaning demonstration',
-        image: 'litter-box-social-grid.png',
+        imageAlt: 'Self-Cleaning Litter Box Global Social Agentic pet product social search results: short-form videos from multiple creators covering the same category, some marked as paid partnerships',
+        image: 'litter-box-social-search.png',
         items: [
           ['The challenge', 'A self-cleaning litter box sells into overseas markets where content depends on footage from real cat-owning homes, and staged shots convince few buyers. The person paying is the owner and the one using it is the cat, so content has to answer the owner\'s concerns about odor, hygiene, and safety while showing how the cat actually comes to accept the device. The product also needs weeks of continuous use before the footage is credible, so creator timelines look nothing like fast-moving consumer electronics.'],
           ['Content & creator collaboration', 'Creator screening and household matching (including multi-cat homes and different litter habits), briefing and check-ins across a multi-week usage cycle, user-generated footage collection and usage rights, compliance review of health and odor wording for each platform, and community response Agents organize signals scattered across platform inboxes, DMs, creator chats, and spreadsheets.'],
